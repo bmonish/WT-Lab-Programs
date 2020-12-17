@@ -5,20 +5,19 @@
     <script>
         function validateForm(){
             var x = document.forms["myform"]["fname"].value;
-            if (x==""){
-                alert("Name must be filled out");
+            var y = document.forms["myform"]["gender"].value;
+
+
+            if (x=="" || y==""){
+                alert("All the fields should be filled");
                 return false;
             }
 
-            var y = document.forms["myform"]["gender"].value;
-            if(y==""){
-                alert("Gender must be selected");
-                return false;
-            }
+            
 
             // Example format
             // var variable_name = document.forms["myform"]["input_field_name"].value;
-            // And the same if condition with variable_name and customized alert text
+            // And add || variable_name=="" inside the if condition part
         }
     </script>
 </head>
