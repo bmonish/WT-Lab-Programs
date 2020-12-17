@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Image Maps</title>
+    <!-- Optional Styling -->
+    <style>
+        body{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h2>Image Maps</h2>
+    <p>Click on the laptop to go to a new page and read more!</p>
+
+    <img src="laptop.jpg" alt="laptop" usemap="#lapmap">
+    
+    <map name="lapmap">
+        <area shape="rect" coords="130,40,900,600" alt="map for laptop" href="laptop.html">
+    </map>
+</body>
+</html>
