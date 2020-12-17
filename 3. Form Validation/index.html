@@ -9,12 +9,30 @@
                 alert("Name must be filled out");
                 return false;
             }
+
+            var y = document.forms["myform"]["gender"].value;
+            if(y==""){
+                alert("Gender must be selected");
+                return false;
+            }
+
+            // Example format
+            // var variable_name = document.forms["myform"]["input_field_name"].value;
+            // And the same if condition with variable_name and customized alert text
         }
     </script>
 </head>
 <body>
     <form name="myform" method="POST" onsubmit="return validateForm()">
+        <!-- TextBox -->
         Name: <input type="text" name="fname"><br><br>
+
+        <!-- Checkbox -->
+        Gender: <input type="radio" name="gender" value="male">Male 
+        <input type="radio" name="gender" value="female">Female<br><br>
+
+        <!-- Add as much input fields necessary and initialize the value in the function -->
+
         <input type="submit" value="submit">
     </form>
 </body>
