@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="simplexml.xsl"?>
+
+<Student>
+    <Person-Details>
+        <name>Anand</name>
+        <address>Pune</address>
+        <std>Second</std>
+        <marks>70 Percent</marks>
+    </Person-Details>
+    <Person-Details>
+        <name>Anuradha</name>
+        <address>Chennai</address>
+        <std>Second</std>
+        <marks>90 Percent</marks>
+    </Person-Details>
+</Student>
