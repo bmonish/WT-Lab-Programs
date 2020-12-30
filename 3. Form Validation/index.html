@@ -5,9 +5,11 @@
     <script>
         function validateForm(){
             var x = document.forms["myform"]["fname"].value;
-            var y = document.forms["myform"]["gender"].value;
+            var y = document.forms["myform"]["email"].value;
+            var z = document.forms["myform"]["sub"].value;
+            var w = document.forms["myform"]["msg"].value;
 
-            if (x=="" || y==""){
+            if (x=="" || y=="" || z=="" || w==""){
                 alert("All the fields should be filled");
                 return false;
             }
@@ -16,19 +18,42 @@
             // And add || variable_name=="" inside the if condition part
         }
     </script>
+
+    <!-- Styling Optional -->
+    <style>
+        .container {
+            margin-left: auto;
+            width:fit-content;
+            margin-right: auto;
+        }
+    </style>
 </head>
 <body>
+    <!-- Div Optional -->
+    <div class="container">
     <form name="myform" method="POST" onsubmit="return validateForm()">
-        <!-- TextBox -->
-        Name: <input type="text" name="fname"><br><br>
-
-        <!-- Checkbox -->
-        Gender: <input type="radio" name="gender" value="male">Male 
-        <input type="radio" name="gender" value="female">Female<br><br>
-
-        <!-- Add as much input fields necessary and initialize the value in the function -->
-
-        <input type="submit" value="submit">
+        <table>
+            <tr>
+                <td>Name:</td>
+                <td><input type="text" name="fname"></td>
+            </tr>
+            <tr>
+                <td>Email:</td>
+                <td><input type="email" name="email"></td>
+            </tr>
+            <tr>
+                <td>Subject:</td>
+                <td><input type="text" name="sub"></td>
+            </tr>
+            <tr>
+                <td>Message:</td>
+                <td><textarea name="msg"></textarea></td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="submit"></td>
+            </tr>
+        </table>
     </form>
+</div>
 </body>
 </html>
